@@ -1,0 +1,221 @@
+.home .content {
+    max-width: 600px;
+    color: #fff;
+}
+.content h2 {
+    font-size: 3em;
+    letter-spacing: .04em;
+}
+.content a {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    padding: 10px 40px; /* Dodano wypełnienie, aby zwiększyć szerokość przycisku */
+    display: inline-block; /* Zapewnia, że wypełnienie działa prawidłowo */
+    font-size: 1.2em; /* Opcjonalnie, zwiększenie rozmiaru czcionki */
+    margin-top: 20px; /* Dodano margines górny, aby dodać odstęp od tekstu powyżej */
+    transition: 0.5s;
+}
+.content a:hover {
+    background: #1e0b04;
+}
+.header .logo {
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.button-app.is-lighty.logout-button {
+position: relative;
+border: none;
+font-size: 1.1em;
+color: #fff;
+text-decoration: none;
+margin-left: 40px;
+background: transparent; /* Tło przezroczyste, jeśli nie chcesz zmieniać koloru tła */
+}
+
+.button-app.is-lighty.logout-button::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 100%;
+height: 3px;
+background: #fff;
+border-radius: 5px;
+transform: scaleX(0);
+transition: transform 0.5s;
+}
+
+.button-app.is-lighty.logout-button:hover::after {
+transform: scaleX(1);
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+.home {
+position: relative;
+width: 100vw;
+height: 100vh;
+background: url(./images/SLBackground.png) no-repeat center center fixed; /* fixed, aby zdjęcie nie przewijało się */
+background-size: cover; /* sprawia, że tło zajmuje całą przestrzeń */
+display: flex;
+align-items: center;
+padding: 80px 100px 0;
+}
+.home::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.2); /* Czarny kolor z 50% przezroczystości */
+z-index: 1; /* Upewnij się, że nakładka jest nad tłem */
+}
+.wrapper-login {
+position: relative; /* Dodaj tę linię */
+z-index: 2; /* Ustaw wyższy z-index niż nakładka */
+}
+.wrapper-login {
+max-width: 440px;
+width: 100%;
+padding: 20px;
+box-shadow: none;
+display: flex;
+flex-direction: column;
+}
+
+.wrapper-login h2 {
+font-size: 2em;
+color: #fff;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.input-box {
+position: relative;
+width: 100%;
+height: 50px;
+margin: 20px 0;
+}
+
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: 1px solid #fff;
+outline: none;
+border-radius: 40px;
+font-size: 1em;
+color: #fff;
+padding: 0 5px 0 45px;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+font-size: 8px;
+top: -14px;
+left: 17px;
+color: #fff;
+}
+
+.input-box label {
+position: absolute;
+font-size: 1em;
+color: #fff;
+top: 50%;
+left: 45px;
+transform: translateY(-50%);
+pointer-events: none;
+transition: .5s;
+}
+
+.input-box .icon {
+position: absolute;
+font-size: 1.2em;
+color: #fff;
+top: 14px;
+left: 15px;
+}
+
+.btn {
+width: 100%;
+height: 50px;
+border: none;
+outline: none;
+border-radius: 40px;
+background: linear-gradient(90deg, #1e0b04, #71412a);
+box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+cursor: pointer;
+font-size: 1em;
+color: #fff;
+font-weight: 500;
+}
+
+.footer-text {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.9em;
+color: #fff;
+text-align: center;
+}
+
+.register-container {
+display: flex;
+justify-content: center; /* Wyśrodkowanie w poziomie */
+align-items: center; /* Wyśrodkowanie w pionie */
+margin-top: 20px; /* Odstęp od formularza */
+font-size: 0.9em;
+color: #fff;
+}
+
+.register-container .register-link {
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+margin-left: 5px; /* Odstęp między tekstem a linkiem */
+}
+
+.register-container .register-link:hover {
+text-decoration: underline;
+}
+
+.notification-container {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+}
+
+.notification {
+background: #00c851;
+color: #fff;
+padding: 20px;
+border-radius: 5px;
+}
+
+.notification.is-success {
+background: #00c851;
+}
+
+.margin{
+margin-top: -80px;
+}

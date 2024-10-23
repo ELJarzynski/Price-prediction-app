@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=realestatepriceforecast_db
+      - DB_USER=postgres
+      - DB_PASSWORD=kamil
+      - DB_HOST=db
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: realestatepriceforecast_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: kamil
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
