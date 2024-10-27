@@ -18,24 +18,9 @@ Make sure you have Docker installed on your machine.
    ```bash
    git clone <repository-url>
    cd <repository-directory>
-2. **Build the Docker image for the backend:**
+2. **Build and run the Docker containers:**
    ```bash
-   docker build -t house-price-prediction-backend .
-3. **Run the Docker container for the backend:**
-    ```bash
-   docker run -p 8000:8000 house-price-prediction-backend
-
-### Setting Up the Frontend
-1. **Navigate to the frontend directory:**
-    ```bash
-    cd <frontend-directory>
-2. **Install dependencies for Vue.js:**
-    ```bash
-    npm install
-3. **Run the Vue development server:**
-    ```bash
-    npm run serve
-
+   docker-compose up --build
 
 ### Ensuring Database Connectivity
-To make sure the Django backend connects to the PostgreSQL database, ensure you have the following settings in your Django settings file (`settings.py`):
+To make sure the Django backend connects to the PostgreSQL database, ensure you have the right password for your pgAdmin app in settings in your Django settings file (`settings.py`):

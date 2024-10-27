@@ -1,11 +1,10 @@
-version: '3.8'
-
 services:
   web:
-    build: .
+    build:
+      context: ../RealEstatePriceForecastBackend  # Poprawna ścieżka do backendu
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/app
+      - ../RealEstatePriceForecastBackend:/app
     ports:
       - "8000:8000"
     depends_on:
@@ -17,8 +16,7 @@ services:
       - DB_HOST=db
 
   db:
-    image: postgres:13
-    restart: always
+    image: postgres:17
     environment:
       POSTGRES_DB: realestatepriceforecast_db
       POSTGRES_USER: postgres
@@ -27,6 +25,12 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+  frontend:
+    build:
+      context: ../frontend  # Ścieżka do frontend Dockerfile
+    ports:
+      - "5173:5173"  # Port dla aplikacji Vue.js
 
 volumes:
   postgres_data:

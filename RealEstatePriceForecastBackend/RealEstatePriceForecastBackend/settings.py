@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'realestatepriceforecast_db',
         'USER': 'postgres',
         'PASSWORD': 'kamil',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
