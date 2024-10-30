@@ -18,5 +18,5 @@ urlpatterns = [
     path('<int:property_id>/delete_user/<int:user_id>/', DeletePropertyUserView.as_view(), name='property-user-delete'),
     path('<int:property_id>/delete_property/', DeletePropertyView.as_view(), name='property-delete'),
     path('<int:property_id>/edit_property/', UpdatePropertyView.as_view(), name='property-edit'),
-    path('predict_price/', PredictPriceView.as_view(), name='predict-price')
+    path('predict_price/', PredictPriceView.as_view(), name='predict-price'),
 ]
