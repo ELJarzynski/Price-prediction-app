@@ -1,12 +1,11 @@
 name: Quality Assurance
 on:
-  push:
-    branches:
-      - workflows
   pull_request:
     branches:
-      - main
-
+      - master  # lub gałąź, do której tworzysz PR
+  push:
+    branches:
+      - workflow  # zamień na nazwę twojej gałęzi
 
 jobs:
   quality-assurance:
@@ -33,5 +32,3 @@ jobs:
 
       - name: Test
         run: make test
-        env:
-          continue

@@ -1,6 +1,6 @@
 # House Price Prediction Application
 
-This is my engineering project on house price prediction using a dataset from Kaggle. The application is a web application built with Django for the backend and Vue.js for the frontend. The backend is containerized using Docker.
+This is my engineering project on house price prediction using a dataset from Kaggle. The application is a web application built with Django for the backend and Vue.js for the frontend. The app is containerized using Docker, making it easy to deploy and start.
 
 ## Features
 - Predict house prices based on various features
