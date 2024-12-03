@@ -5,15 +5,16 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 WORKDIR /app
 
-# Zainstaluj libpq-dev i inne wymagane pakiety
+# Install libpq-dev and PostgreSQL client
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
-    && rm -rf /var/lib/apt/lists/*  # Oczyść po instalacji
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY ./requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt  # Zainstaluj wymagane pakiety
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 

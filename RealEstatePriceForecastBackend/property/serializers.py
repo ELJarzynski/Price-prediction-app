@@ -1,4 +1,3 @@
-# property/serializers.py
 from rest_framework import serializers
 from property.models import Property, PropertyUser
 from user.models import User

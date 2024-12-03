@@ -1,7 +1,7 @@
 services:
   web:
     build:
-      context: ../RealEstatePriceForecastBackend  # Poprawna ścieżka do backendu
+      context: ../RealEstatePriceForecastBackend
     volumes:
       - ../RealEstatePriceForecastBackend:/app
     ports:
@@ -9,31 +9,27 @@ services:
     depends_on:
       - db
     environment:
-      - DB_NAME=realestatepriceforecast_db
-      - DB_USER=postgres
-      - DB_PASSWORD=kamil
-      - DB_HOST=db
+      - DB_NAME=${SQL_NAME}
+      - DB_USER=${SQL_USER}
+      - DB_PASSWORD=${SQL_PASSWORD}
+      - DB_HOST=${HOST}
 
   db:
     image: postgres:17
     environment:
-      POSTGRES_DB: realestatepriceforecast_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: kamil
+      POSTGRES_DB: ${SQL_NAME}
+      POSTGRES_USER: ${SQL_USER}
+      POSTGRES_PASSWORD: ${SQL_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "${PORT}:5432"
 
   frontend:
     build:
-      context: ../frontend  # Ścieżka do frontend Dockerfile
+      context: ../frontend
     ports:
-      - "5173:5173"  # Port dla aplikacji Vue.js
+      - "5173:5173"
 
 volumes:
   postgres_data:
-
-
-
-

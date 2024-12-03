@@ -6,7 +6,7 @@ from .serializers import PropertySerializer, PropertyUserSerializer
 import joblib
 import numpy as np
 
-# Load the model once during server startup
+
 model = joblib.load('property/linear_regression_model_October_29.pkl')
 
 class PredictPriceView(generics.GenericAPIView):

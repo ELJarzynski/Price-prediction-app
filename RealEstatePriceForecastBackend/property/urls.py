@@ -1,4 +1,3 @@
-# property/urls.py
 from django.urls import path
 from property.views import (
     CreatePropertyView, CreatePropertyUserView, RetrievePropertyView,
