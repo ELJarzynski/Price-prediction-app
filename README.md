@@ -23,4 +23,7 @@ Make sure you have Docker installed on your machine.
    docker-compose up --build
 
 ### Ensuring Database Connectivity
-To make sure the Django backend connects to the PostgreSQL database, ensure you have the right password for your pgAdmin app in settings in your Django settings file (`settings.py`):
+To make sure the Django backend connects to the PostgreSQL database, ensure you have the right password for your pgAdmin app in env in your Django
+![alt table](./images/photo2.png)
+![alt table](./images/photo1.png)
+![alt table](./images/photo3.png)
