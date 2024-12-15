@@ -12,7 +12,7 @@ This is my engineering project on house price prediction using a dataset from Ka
 ### Prerequisites
 Make sure you have Docker installed on your machine.
 
-### Setting Up the Backend
+### Running Application
 
 1. **Clone the repository:**
    ```bash
